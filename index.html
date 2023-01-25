@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h3 id="encabezado">Conversor de monedas Nacional</h2>
+        <h4>Pesos CLP$</h4>
+        <form id="formulario" action="">
+            <input type="number" name="monto" id="monto" placeholder="Ingrese monto"
+                onkeypress="return (event.charCode >= 48 /* '0' */ && event.charCode <= 57 /* '9' */)">
+            <select name="moneda" id="moneda">
+                <option value="" hidden selected>Moneda</option>
+                <option value="uf">Uf</option>
+                <option value="ivp">Ivp</option>
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+                <option value="ipc">Ipc</option>
+                <option value="utm">Utm</option>
+                <option value="bitcoin">Bitcoin</option>
+            </select>
+            <button type="submit">Convertir</button>
+            <button type="reset">Limpiar valores</button>
+        </form>
+        <h3 id="resultado"></h3>
+        <h3 id="cargando"></h3>
+        <canvas id="grafica"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+ body {
+     display: grid;
+     place-items: center;
+     height: 100vh;
+     background: wheat;
+ }
+
+ #encabezado,
+ h4 {
+     margin-bottom: 10px;
+     line-height: 30px;
+ }
+
+ input:not([type="checkbox"], [type="radio"]),
+ select,
+ textarea {
+     width: 48%;
+     margin-bottom: 0.3rem;
+ }
+
+ button {
+     margin-bottom: 0.3rem;
+ }
+
+ .contenedor {
+     width: 400px;
+     height: 610px;
+     padding: 10px;
+     border-radius: 10px;
+     background: lightcyan;
+     border: 10px outset;
+     overflow: hidden;
+     text-align: center;
+ }
+
+ #resultado {
+     margin-top: 0px;
+     margin-bottom: 0px;
+     color: #71d90b;
+     animation-name: parpadeo;
+     animation-duration: 2s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+
+ #grafica {
+     width: 360px;
+     height: 160px;
+ }
+
+ @keyframes parpadeo {
+     0% {
+         opacity: 1.0;
+     }
+
+     50% {
+         opacity: 0.0;
+     }
+
+     100% {
+         opacity: 1.0;
+     }
+ }
